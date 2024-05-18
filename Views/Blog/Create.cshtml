@@ -1,0 +1,10 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model Blog
+
+<form asp-controller="Blog" asp-action="Create">
+    <input asp-for="Title" placeholder="title" /><span asp-validation-for="Title"></span>
+    <input asp-for="Author" placeholder="author" /><span asp-validation-for="Author"></span>
+    <button type="submit" class="button btn-primary">Create</button>
+</form>

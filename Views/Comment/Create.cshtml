@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model Comment
+
+<h1>@ViewData["Title"]</h1>
+<div>
+    <form asp-controller="Comment" asp-action="Create">
+        <input type="hidden" asp-for="BlogId" />
+        <input type="hidden" asp-for="Id" />
+        <table class="table table-striped">
+            <tr>
+                <td>Created: @DateTime.Now</td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea style="width: 100%; padding: 10px;" asp-for="Content"></textarea>
+                    <span asp-validation-for="Content"></span>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </form>
+</div>

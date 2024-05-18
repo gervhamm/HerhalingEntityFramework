@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model Blog
+
+<form asp-controller="Blog" asp-action="Update" method="post">
+    <label asp-for="Title"></label>
+    <input style="width: 100%; padding: 10px;" asp-for="Title" placeholder="@Model.Title" /><span asp-validation-for="Title"></span>
+    <br />
+    <label asp-for="Author"></label>
+    <input style="width: 100%; padding: 10px;" asp-for="Author" placeholder="@Model.Author" /><span asp-validation-for="Author"></span>
+    <br />
+    <br />
+    <button type="submit" class="button btn-primary">Update</button>
+</form>
